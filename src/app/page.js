@@ -12,8 +12,8 @@ import fetchBlogs from "@/helpers/fetch-blogs"
 const Home = async () => {
 
   const [featuredBlogs, blogs] = await Promise.all([
-    await fetchBlogs('filters[isFeatured][$eq]=true'),
-    await fetchBlogs('filters[isFeatured][$eq]=false')
+    await fetchBlogs('filters[IsFeatured][$eq]=true'),
+    await fetchBlogs('filters[IsFeatured][$eq]=false')
   ])
 
   console.log('blogs', blogs.data)
